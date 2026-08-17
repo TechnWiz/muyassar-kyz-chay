@@ -411,24 +411,27 @@ h2 em {
   animation: meadow 6s ease-in-out infinite;
 }
 .venue-mark {
-  display: grid;
   position: relative;
   z-index: 1;
-  grid-template-columns: repeat(2, 33px);
-  grid-template-rows: repeat(2, 33px);
-  gap: 5px;
-  place-content: center;
+  display: grid;
+  place-items: center;
   width: 135px;
   height: 135px;
   margin: 37px auto 31px;
+}
+.venue-mark__diamond {
+  display: grid;
+  grid-template-columns: repeat(2, 33px);
+  grid-template-rows: repeat(2, 33px);
+  gap: 5px;
   border: 1px solid rgba(244, 236, 221, 0.55);
   transform: rotate(45deg);
 }
-.venue-mark span {
+.venue-mark__diamond span {
   border: 1px solid rgba(244, 236, 221, 0.72);
 }
-.venue-mark span:nth-child(1),
-.venue-mark span:nth-child(4) {
+.venue-mark__diamond span:nth-child(1),
+.venue-mark__diamond span:nth-child(4) {
   background: var(--wine);
 }
 .venue-mark b {
@@ -484,6 +487,7 @@ h2 em {
   place-items: center;
   background: var(--wine);
   color: var(--cream);
+  border-top: 1px solid rgba(244, 236, 221, 0.22);
 }
 .floral--footer {
   bottom: 0;
@@ -497,7 +501,7 @@ h2 em {
   position: absolute;
   z-index: 0;
   top: 0;
-  right: 5px;
+  right: 6px;
   left: auto;
   width: min(300px, 62vw);
   max-width: none;
