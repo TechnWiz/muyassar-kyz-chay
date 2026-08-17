@@ -90,15 +90,3 @@ function initRevealAnimations() {
   });
 }
 
-document.querySelector(".rsvp-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const number = form.dataset.whatsappNumber;
-  const data = new FormData(form);
-  const message = `Здравствуйте!\n\nИмя: ${data.get("name")}\nТелефон: ${data.get("contact") || "не указан"}\nПрисутствие: ${data.get("attendance")}\nПожелание: ${data.get("message") || "—"}`;
-  window.open(
-    `https://wa.me/${number}?text=${encodeURIComponent(message)}`,
-    "_blank",
-    "noopener",
-  );
-});
