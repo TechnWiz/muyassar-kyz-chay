@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5b202a" />
+    <title>Муяссар кыз чай — 09.09.2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <!-- Open Graph / превью ссылки -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Муяссар кыз чай — 09.09.2026" />
+  <meta
+    property="og:description"
+    content="Приглашаем вас разделить с нами тёплый и особенный день. 9 сентября 2026, 16:00, банкетный зал «Versal», Бишкек."
+  />
+  <meta
+    property="og:image"
+    content="https://ВАШ-АДРЕС-САЙТА/src/images/preview.jpg"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://ВАШ-АДРЕС-САЙТА/" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Twitter Card / некоторые мессенджеры используют эти же теги -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Муяссар кыз чай — 09.09.2026" />
+  <meta
+    name="twitter:description"
+    content="9 сентября 2026, 16:00 · Банкетный зал «Versal», Бишкек"
+  />
+  <body>
+    <main class="intro" aria-label="Открытие приглашения">
+      <video
+        class="intro__video"
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src="src/images/Intro.mp4" type="video/mp4" />
+      </video>
+      <button
+        class="start-overlay"
+        type="button"
+        aria-label="Открыть приглашение со звуком"
+      >
+        <span class="start-overlay__mark" aria-hidden="true"
+          ><i></i><i></i><i></i><i></i></span
+        ><span class="start-overlay__text">Открыть<br />приглашение</span>
+      </button>
+    </main>
+    <audio class="background-music" loop preload="auto">
+      <source src="src/audio/Surayyo Qosimova - Uyg'urcha (music version).mp3" type="audio/mpeg" />
+    </audio>
+    <button
+      class="music-toggle"
+      type="button"
+      aria-label="Включить музыку"
+      aria-pressed="false"
+    >
+      <span aria-hidden="true">♪</span> Музыка
+    </button>
+    <main class="invitation" id="invitation" aria-hidden="true">
+      <header class="hero section">
+        <img
+          class="floral floral--top"
+          src="src/images/TopFlowers.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <p class="eyebrow">Приглашение на праздник</p>
+        <div class="ornament ornament--top" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <h1>Муяссар<br /><em>кыз чай</em></h1>
+        <p class="hero__translation">Muyassar’s kyz chay</p>
+        <p class="hero__lead">
+          Будем рады разделить с вами<br />тёплый и особенный день
+        </p>
+        <p class="date">09 <span>сентября</span> 2026 <b>·</b> 16:00</p>
+        <a class="scroll-link" href="#details">Листайте вниз <span>↓</span></a>
+      </header>
+      <section class="countdown section" id="details">
+        <img
+          class="floral floral--branch-left"
+          src="src/images/BackgroundFlowers.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="floral floral--branch-right"
+          src="src/images/BackgroundFlowers.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <p class="kicker">09 · 09 · 2026</p>
+        <h2>В ожидании<br /><em>встречи</em></h2>
+        <div
+          class="calendar"
+          aria-label="Календарь: сентябрь 2026 года, праздник в среду 9 сентября"
+        >
+          <p class="calendar__month">Сентябрь <span>2026</span></p>
+          <div class="calendar__week" aria-hidden="true">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span
+            ><span>Пт</span><span>Сб</span><span>Вс</span>
+          </div>
+          <div class="calendar__days" aria-hidden="true">
+            <span></span><span></span><span>1</span><span>2</span><span>3</span
+            ><span>4</span><span>5</span><span>6</span><span>7</span
+            ><span>8</span><span class="calendar__day">9</span><span>10</span
+            ><span>11</span><span>12</span><span>13</span><span>14</span
+            ><span>15</span><span>16</span><span>17</span><span>18</span
+            ><span>19</span><span>20</span><span>21</span><span>22</span
+            ><span>23</span><span>24</span><span>25</span><span>26</span
+            ><span>27</span><span>28</span><span>29</span><span>30</span>
+          </div>
+          <p class="calendar__note">Среда · 9 сентября</p>
+        </div>
+        <div class="timer" data-date="2026-09-09T16:00:00+06:00">
+          <div><strong data-days>000</strong><span>дней</span></div>
+          <div><strong data-hours>00</strong><span>часов</span></div>
+          <div><strong data-minutes>00</strong><span>минут</span></div>
+          <div><strong data-seconds>00</strong><span>секунд</span></div>
+        </div>
+      </section>
+      <section class="location section">
+        <img
+          class="floral floral--meadow"
+          src="src/images/Flowers.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <p class="kicker">Место встречи</p>
+        <h2>Праздник<br /><em>в кругу близких</em></h2>
+        <div class="venue-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><b>V</b>
+        </div>
+        <div class="location__copy">
+          <h3>Банкетный зал<br />«Versal»</h3>
+          <p>г. Бишкек<br />Проспект Победы, 323</p>
+          <p class="location__time">Начало в <strong>16:00</strong></p>
+          <a
+            class="button button--outline"
+            href="https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D0%9F%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9F%D0%BE%D0%B5%D0%B4%D1%8B%2C%20323"
+            target="_blank"
+            rel="noopener"
+            >Открыть карту</a
+          >
+        </div>
+      </section>
+      <section class="rsvp section">
+        <p class="kicker">Будем признательны за ответ</p>
+        <h2>Подтвердите<br /><em>присутствие</em></h2>
+        <p class="section-copy">
+          Пожалуйста, сообщите нам, сможете ли вы разделить этот день с нами.
+        </p>
+        <form class="rsvp-form" data-whatsapp-number="">
+          <label
+            >Имя и фамилия<input
+              name="name"
+              required
+              placeholder="Ваше имя" /></label
+          ><label
+            >Телефон<input name="contact" type="tel" placeholder="Для связи"
+          /></label>
+          <fieldset>
+            <legend>Сможете прийти?</legend>
+            <div class="choice-row">
+              <label
+                ><input
+                  type="radio"
+                  name="attendance"
+                  value="Да, с радостью приду"
+                  required
+                /><span>Да, с радостью приду</span></label
+              ><label
+                ><input
+                  type="radio"
+                  name="attendance"
+                  value="К сожалению, не смогу"
+                /><span>К сожалению, не смогу</span></label
+              >
+            </div>
+          </fieldset>
+          <label
+            >Ваше пожелание<textarea
+              name="message"
+              placeholder="Напишите несколько тёплых слов..."
+            ></textarea></label
+          ><button class="button" type="submit">Отправить ответ</button>
+        </form>
+      </section>
+      <footer class="footer section">
+        <img
+          class="floral floral--footer"
+          src="src/images/TopFlowers.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="footer__content">
+          <div class="ornament" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </div>
+          <p>Будем рады вашей улыбке,<br />тёплым словам и присутствию</p>
+          <h2>До скорой<br /><em>встречи</em></h2>
+          <div class="footer__details">
+            09 сентября 2026 · 16:00<br />Банкетный зал «Versal», Бишкек
+          </div>
+          <div class="footer__signature">
+            <p>С уважением</p>
+            <strong>Пархат <span>и</span> Гульжамал</strong>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
