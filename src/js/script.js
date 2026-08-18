@@ -57,6 +57,7 @@ musicToggle.addEventListener("click", () => {
 const timer = document.querySelector(".timer");
 const targetDate = new Date(timer.dataset.date);
 const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 };
+let timerInterval;
 function updateTimer() {
   let remaining = Math.max(0, targetDate - new Date());
   for (const [unit, milliseconds] of Object.entries(units)) {
@@ -68,8 +69,23 @@ function updateTimer() {
         : String(value).padStart(2, "0");
   }
 }
-updateTimer();
-window.setInterval(updateTimer, 1000);
+function startTimer() {
+  if (timerInterval) return;
+  updateTimer();
+  timerInterval = window.setInterval(updateTimer, 1000);
+}
+
+function stopTimer() {
+  window.clearInterval(timerInterval);
+  timerInterval = undefined;
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) stopTimer();
+  else startTimer();
+});
+
+startTimer();
 
 function initRevealAnimations() {
   const sections = document.querySelectorAll(".section:not(.hero)");
