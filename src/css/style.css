@@ -511,8 +511,8 @@ h2 em {
   margin: 37px auto 31px;
 }
 .venue-mark__ornament {
-  width: 118px;
-  height: 118px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   animation: venue-ornament-float 5.5s ease-in-out infinite;
 }
