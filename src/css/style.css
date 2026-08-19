@@ -305,6 +305,9 @@ h3 {
 .footer-corners {
   position: relative;
   z-index: 1;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   pointer-events: none;
   user-select: none;
 }
@@ -342,7 +345,7 @@ h3 {
 }
 .ornament-band--hero {
   width: min(240px, 56vw);
-  margin: -6px 0 18px;
+  margin: -6px auto 18px;
   opacity: 0.72;
   animation: sway 4.4s ease-in-out infinite;
 }
@@ -484,36 +487,40 @@ h2 em {
 }
 .ornament-band--location {
   width: min(290px, 65vw);
-  margin: 27px 0 -3px;
+  margin: 27px auto -3px;
   opacity: 0.62;
   animation: sway 5s ease-in-out infinite;
   animation-delay: 0.4s;
 }
 .ornament-band--countdown {
   width: min(230px, 55vw);
-  margin: 22px 0 -4px;
+  margin: 22px auto -4px;
   opacity: 0.7;
   animation: sway 4.8s ease-in-out infinite;
 }
 .ornament-band--location-bottom {
   width: min(220px, 52vw);
-  margin: 31px 0 -36px;
+  margin: 31px auto -36px;
   opacity: 0.55;
   animation: sway 5.2s ease-in-out infinite;
 }
 .venue-mark {
   position: relative;
   z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 135px;
-  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
   margin: 37px auto 31px;
 }
+
 .venue-mark__ornament {
-  width: 72px;
-  height: 72px;
+  display: block;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
+  margin: 0;
   animation: venue-ornament-float 5.5s ease-in-out infinite;
 }
 .location__copy h3 {
@@ -564,7 +571,7 @@ h2 em {
 }
 .ornament-band--footer {
   width: min(260px, 60vw);
-  margin: 26px 0 -4px;
+  margin: 26px auto -4px;
   opacity: 0.55;
   animation: sway 4.7s ease-in-out infinite;
   animation-delay: 0.2s;
@@ -579,11 +586,12 @@ h2 em {
 .footer p {
   margin: 24px 0 19px;
   color: rgba(53, 21, 26, 0.8);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
 }
 .footer h2 {
   font-size: clamp(58px, 14vw, 96px);
+  color: var(--wine);
 }
 .footer h2 em {
   color: var(--wine);
@@ -695,8 +703,15 @@ h2 em {
   }
 }
 @keyframes venue-ornament-float {
-  0%, 100% { translate: 0 0; opacity: 0.94; }
-  50% { translate: 0 -5px; opacity: 1; }
+  0%,
+  100% {
+    translate: 0 0;
+    opacity: 0.94;
+  }
+  50% {
+    translate: 0 -5px;
+    opacity: 1;
+  }
 }
 @media (max-width: 640px) {
   .section {
@@ -803,5 +818,82 @@ h2 em {
   }
   .venue-mark__ornament {
     animation: none;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.invitation {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(22px, calc((100vw - 620px) / 2));
+  padding-right: max(22px, calc((100vw - 620px) / 2));
+}
+
+/* Контент всегда рассчитывается от центра секции */
+.location,
+.hero,
+.countdown,
+.footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Центральные элементы */
+.hero > h1,
+.hero > p,
+.location > h2,
+.location > .kicker,
+.location__copy,
+.venue-mark,
+.countdown > h2,
+.countdown > .kicker,
+.calendar,
+.timer,
+.footer__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Чтобы декоративные цветы не влияли
+   на визуальное положение центрального контента */
+.floral {
+  pointer-events: none;
+}
+
+/* На телефоне — строго симметричные отступы */
+@media (max-width: 640px) {
+  .section {
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
